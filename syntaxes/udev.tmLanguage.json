@@ -1,0 +1,49 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "udev",
+	"patterns": [
+		{ "include": "#arguments" },
+		{ "include": "#comments" },
+		{ "include": "#keywords" },
+		{ "include": "#operators" },
+		{ "include": "#strings" }
+	],
+	"repository": {
+		"arguments": {
+			"patterns": [{
+				"name": "constant.language",
+				"match": "{[a-zA-Z]+}"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line",
+				"match": "#.*$"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control",
+				"match": "\\b(ACTION|ATTR|ATTRS|CONST|DEVPATH|DRIVER|DRIVERS|ENV|GOTO|GROUP|IMPORT|KERNEL|KERNELS|LABEL|MODE|NAME|OPTIONS|OWNER|PROGRAM|RESULT|RUN|SECLABEL|SUBSYSTEM|SUBSYSTEMS|SYMLINK|SYSCTL|TAG|TAGS|TEST)\\b"
+			}]
+		},
+		"operators": {
+			"patterns": [{
+				"name": "keyword.operator",
+				"match": "(==|!=|\\+=|-=|:=|=)"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.udev",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.udev"
+}

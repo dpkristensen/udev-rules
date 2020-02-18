@@ -1,0 +1,2 @@
+# Sample udev rule to run a script on detection of the RPMB device using the SCSI Generic driver
+SUBSYSTEM=="scsi_generic", KERNELS=="0:0:0:49217", ACTION=="add", GROUP="rpmb", MODE="0660", RUN{program}+="/bin/init-rpmb.sh $devpath"
