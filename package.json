@@ -1,14 +1,14 @@
 {
-    "_copyright" : "Copyright (c) 2020, Daniel Kristensen, Garmin Ltd, or its subsidiaries.",
+    "_copyright": "Copyright (c) 2020, Daniel Kristensen, Garmin Ltd, or its subsidiaries.",
     "author": {
         "name": "Daniel Kristensen"
     },
-    "publisher": "dpkristense-garmin",
+    "publisher": "dpkristensen-garmin",
     "license": "SEE LICENSE IN LICENSE.md",
     "name": "udev-rules",
     "displayName": "udev-rules",
     "description": "Syntax highlighting for udev rules",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.20.0"
     },
@@ -21,17 +21,26 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "udev",
-            "aliases": ["udev", "udev"],
-            "extensions": [".rules"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "udev",
-            "scopeName": "source.udev",
-            "path": "./syntaxes/udev.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "udev",
+                "aliases": [
+                    "udev",
+                    "udev"
+                ],
+                "extensions": [
+                    ".rules"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "udev",
+                "scopeName": "source.udev",
+                "path": "./syntaxes/udev.tmLanguage.json"
+            }
+        ]
     },
     "keywords": [
         "udev",
