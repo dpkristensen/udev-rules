@@ -12,7 +12,7 @@
 		"arguments": {
 			"patterns": [{
 				"name": "constant.language",
-				"match": "{[a-zA-Z]+}"
+				"match": "{[a-zA-Z_]+}"
 			}]
 		},
 		"comments": {
